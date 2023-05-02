@@ -52,4 +52,4 @@ jobs:
           app-name: 'frontgpt-testing'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4F20A3E4B60042D8B8AD95D13FFAF947 }}
-          package: .
+          package: ./build
