@@ -29,7 +29,7 @@ function App() {
     case 'multiConversations':
       return (
         <div className="App">
-          <p>Multiple conversations selected. Select only one conversation to use this plugin.</p>
+          <p>Multiple conversations selected. Select only one conversation to use this plugin. Trivial Change</p>
         </div>
       );
     default:
