@@ -17,7 +17,7 @@ function App() {
     case 'noConversation':
       return (
         <div className="App">
-          <p>No conversation selected. Select a conversation to use this plugin.</p>
+          <p>No conversation selected. Select a conversation to use this plugin. Trivial again</p>
         </div>
       );
     case 'singleConversation':
