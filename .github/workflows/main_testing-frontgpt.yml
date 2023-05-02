@@ -26,11 +26,14 @@ jobs:
           npm install
           npm run build --if-present
 
+      - name: zip artifacts
+        run: zip -r app-release.zip .
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: .
+          path: ./app-release.zip
 
   deploy:
     runs-on: ubuntu-latest
@@ -52,4 +55,4 @@ jobs:
           app-name: 'testing-frontgpt'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2B4282E182EB4DDC82090B4FED74DBAF }}
-          package: .
+          package: ./app-release.zip
